@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 3</title>
+</head>
+
+<body>
+    <button>Just one more cat!</button>
+    <div class="giphyCat"></div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script>
+        const button = document.querySelector('button');
+        const giphyCat = document.querySelector('.giphyCat');
+        const apiKey = "zuc82Mqngl711QyPTIOW9Eo6MVeP5fHB"
+        const CatTag = "cat";
+
+
+
+        function getGiphy() {
+            fetch(`http://api.giphy.com/v1/gifs/random?tag=${CatTag}&api_key=${apiKey}&limit=5`)
+
+                .then(response => {
+                    return response.json();
+                })
+
+                .then(myJson => {
+                    giphyCat.innerHTML = '';
+                    const dataElement = document.createElement('img');
+                    dataElement.src = myJson.data.image_url;
+                    giphyCat.appendChild(dataElement);
+
+                });
+        }
+
+        button.addEventListener("click", getGiphy);
+    </script>
+</body>
+
+</html>

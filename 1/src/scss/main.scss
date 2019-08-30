@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 30px;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 10px;
+}
+
+.jumbotron,
+.about,
+.footer {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header,
+.gallery,
+.contact {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.header {
+    height: 15vw;
+    background-color: #424413;
+}
+
+.jumbotron {
+    background-image: url("../../layout/grass.jpg");
+    background-repeat: no-repeat;
+    height: 35vw;
+    background-size: cover;
+}
+
+.gallery__content {
+    height: 60vw;
+    background-color: #08A033;
+    margin-bottom: 10px;
+
+}
+
+.galleryDescription__item {
+    height: 30vw;
+    background-color: #18a1ab;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryItem__text {
+    color: #fff;
+    padding: 15px 15px;
+    font-size: 14px;
+}
+
+.about {
+    height: 40vw;
+    background-color: #A51B35;
+}
+
+.contact {
+    height: 60vw;
+    background-color: #21A110;
+}
+
+.footer {
+    height: 60vw;
+    background-color: #AFB608;
+}
+
+@media (min-width: 800px) {
+    .jumbotron {
+        height: 35vw;
+    }
+
+    .gallery {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery__content {
+        height: 45vw;
+    }
+
+    .galery__description {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .galleryDescription__item {
+        width: calc(50% - 10px);
+        height: 15vw;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:last-child {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+    .galleryItem__text {
+        font-size: 14px;
+    }
+
+    .contact {
+        height: 30vw;
+    }
+
+    .footer {
+        height: 30vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .header,
+    .gallery,
+    .contact {
+        width: 80%;
+    }
+
+    .header {
+        height: 8vw;
+    }
+
+    .jumbotron {
+        height: 30vw;
+    }
+
+    .gallery {
+        flex-direction: row-reverse;
+    }
+
+    .galery__description {
+        width: 20%;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .galleryDescription__item {
+        width: 100%;
+        margin: 0 10px 10px 0;
+    }
+
+    .gallery__content {
+        width: 80%;
+        height: 60vw;
+    }
+
+    .galleryItem__text {
+        font-size: 15px;
+    }
+
+    .about {
+        height: 15vw;
+    }
+
+    .contact {
+        height: 20vw;
+    }
+
+    .footer {
+        height: 15vw;
+
+    }
+}
